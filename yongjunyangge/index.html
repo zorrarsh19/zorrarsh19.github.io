@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="拥军秧歌-中国民间传统舞蹈艺术与拥军优属文化展示平台。提供拥军秧歌的历史起源、表演形式、动作分解及社区活动资讯。">
+    <meta name="keywords" content="拥军秧歌,民间舞蹈,秧歌,拥军优属,广场舞,民俗文化">
+    <title>拥军秧歌-民间传统舞蹈与拥军优属文化展示</title>
+    <style>
+        :root {
+            --primary-red: #C8102E;
+            --primary-dark: #8A0C22;
+            --accent-gold: #FFD700;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #F9F9F9;
+            --white: #FFFFFF;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-red);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-red);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-red);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-dark);
+            color: var(--white);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, rgba(200, 16, 46, 0.9), rgba(138, 12, 34, 0.8)), url('https://picsum.photos/seed/peasant_dance/1920/800.jpg') center/cover no-repeat;
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* 介绍部分 */
+        .intro-section {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .intro-text p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .intro-highlight {
+            background-color: #FFF5F5;
+            border-left: 4px solid var(--primary-red);
+            padding: 20px;
+            margin-top: 20px;
+            font-style: italic;
+            color: var(--primary-dark);
+        }
+
+        .intro-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* 核心特点 */
+        .features {
+            padding: 60px 0;
+            background-color: var(--bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background-color: #FFF0F0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-red);
+            font-size: 24px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* 动作教学 */
+        .tutorial {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+
+        .tutorial-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .step-num {
+            background-color: var(--primary-red);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-top: 5px;
+        }
+
+        .step-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .step-content ul {
+            list-style: disc;
+            margin-left: 20px;
+            color: var(--text-light);
+        }
+
+        /* 资讯与社区 */
+        .news-section {
+            padding: 60px 0;
+            background-color: #F4F4F4;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .news-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .news-img {
+            width: 120px;
+            height: 90px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .news-info h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .news-info p {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .sidebar {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+        }
+
+        .sidebar h3 {
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .hot-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+
+        .hot-list li a:hover {
+            color: var(--primary-red);
+        }
+
+        .hot-list li span {
+            color: #999;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2C2C2C;
+            color: #CCC;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .news-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .news-img {
+                width: 100%;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                拥军秧歌<span>文化网</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#intro">文化简介</a></li>
+                    <li><a href="#features">特色展示</a></li>
+                    <li><a href="#tutorial">动作教学</a></li>
+                    <li><a href="#news">社区资讯</a></li>
+                </ul>
+            </nav>
+            <a href="#join" class="cta-btn">加入队伍</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>传承拥军情，舞动新时代</h1>
+            <p>拥军秧歌是集舞蹈、音乐、戏剧于一体的传统民间艺术形式，承载着军民鱼水情深的深厚底蕴。</p>
+            <div class="hero-tags">
+                <span class="tag">#民间舞蹈</span>
+                <span class="tag">#拥军优属</span>
+                <span class="tag">#民俗文化</span>
+                <span class="tag">#全民健身</span>
+            </div>
+            <a href="#intro" class="cta-btn" style="background: var(--white); color: var(--primary-red);">了解更多</a>
+        </div>
+    </section>
+
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <h2>什么是拥军秧歌？</h2>
+                    <p>拥军秧歌，又称“拥军舞”或“送军秧歌”，源于中国古代民间秧歌，在历史演变中融入了浓厚的拥军优属色彩。它不仅是一种娱乐活动，更是一种表达军民团结、致敬人民子弟兵的情感载体。</p>
+                    <p>这种舞蹈通常在春节、建军节等重大节日由群众自发组织，通过锣鼓喧天、载歌载舞的形式，向驻地部队表达慰问与祝福。其动作粗犷豪放，色彩鲜艳，具有极强的感染力和号召力。</p>
+                    <div class="intro-highlight">
+                        “拥军秧歌是连接军民情感的桥梁，是基层文化生活中最亮丽的风景线。”
+                    </div>
+                </div>
+                <div class="intro-image">
+                    <img src="https://picsum.photos/seed/peasant_dance2/600/400.jpg" alt="拥军秧歌表演现场">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>拥军秧歌的核心特色</h2>
+                <p>独特的艺术形式与深厚的文化内涵</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="icon-box">🎭</div>
+                    <h3>载歌载舞</h3>
+                    <p>打破单一舞蹈模式，将民歌、戏曲唱段与秧歌步法完美融合，既有视觉冲击力，又有听觉享受。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="icon-box">🛡️</div>
+                    <h3>象征意义</h3>
+                    <p>舞者常手持彩扇、彩绸或军号，通过特定的队形变换（如“一字长蛇”、“二龙戏珠”），寓意吉祥与安宁。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="icon-box">🤝</div>
+                    <h3>军民互动</h3>
+                    <p>拥军秧歌往往深入军营，与官兵同台互动，现场气氛热烈，是军民共建精神文明的重要体现。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="icon-box">🎵</div>
+                    <h3>锣鼓伴奏</h3>
+                    <p>以打击乐为主，节奏明快有力，极具乡土气息，能够瞬间调动现场情绪，营造喜庆氛围。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="tutorial" class="tutorial">
+        <div class="container">
+            <div class="section-title">
+                <h2>基础动作教学</h2>
+                <p>掌握核心步伐，感受秧歌魅力</p>
+            </div>
+            <div class="tutorial-container">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h3>十字步（基本步伐）</h3>
+                        <p>这是秧歌中最基础也是最核心的步伐。双脚并拢，膝盖微屈，身体随节奏左右摇摆。</p>
+                        <ul>
+                            <li><strong>左脚向左迈出一步，身体向左倾斜。</strong></li>
+                            <li><strong>右脚跟上，身体回正。</strong></li>
+                            <li><strong>右脚向右迈出，身体向右倾斜。</strong></li>
+                            <li><strong>左脚跟上，身体回正，完成一个循环。</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h3>小碎步（跑动步伐）</h3>
+                        <p>用于表现行进或急促的情绪，步幅极小，频率快，身体保持直立或微前倾。</p>
+                        <ul>
+                            <li><strong>双脚交替快速小步移动。</strong></li>
+                            <li><strong>配合手腕的“盘腕”动作，增加灵活性。</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h3>挽花（扇花技巧）</h3>
+                        <p>手持彩扇，通过手腕的旋转带动彩扇开合，形成“挽花”动作，这是秧歌的“眼”。</p>
+                        <ul>
+                            <li><strong>单手挽花：手腕由内向外或由外向内旋转。</strong></li>
+                            <li><strong>双手挽花：左右手配合，形成交叉或平行运动。</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="news-section">
+        <div class="container">
+            <div class="news-grid">
+                <div class="news-content">
+                    <h2>最新活动与资讯</h2>
+                    <div class="news-card">
+                        <img src="https://picsum.photos/seed/parade/200/150.jpg" alt="社区拥军秧歌汇演" class="news-img">
+                        <div class="news-info">
+                            <h4>市总工会举办“庆八一”拥军秧歌大汇演</h4>
+                            <p>8月1日上午，数百名职工秧歌队员齐聚广场，用欢快的舞姿向最可爱的人致敬。现场气氛热烈，深受市民好评。</p>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <img src="https://picsum.photos/seed/military/200/150.jpg" alt="军民联欢晚会" class="news-img">
+                        <div class="news-info">
+                            <h4>某驻地部队与地方社区开展军民联欢</h4>
+                            <p>军民同台献艺，拥军秧歌成为压轴节目。官兵们被热情的群众舞蹈感染，现场掌声雷动，情感交融。</p>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <img src="https://picsum.photos/seed/training/200/150.jpg" alt="秧歌队日常训练" class="news-img">
+                        <div class="news-info">
+                            <h4>社区秧歌队坚持冬练三九</h4>
+                            <p>为了在春节巡演中呈现最佳状态，社区秧歌队成员们不畏严寒，每天清晨准时在公园集合训练。</p>
+                        </div>
+                    </div>
+                </div>
+                <aside class="sidebar">
+                    <h3>热门专题</h3>
+                    <ul class="hot-list">
+                        <li><span>HOT</span><a href="#">2024年元宵节秧歌大赛规程</a></li>
+                        <li><span>NEW</span><a href="#">如何编排一支优秀的拥军舞？</a></li>
+                        <li><span>TOP</span><a href="#">秧歌道具的选择与保养</a></li>
+                        <li><span>TOP</span><a href="#">各地拥军秧歌风格对比</a></li>
+                        <li><span>NEWS</span><a href="#">非物质文化遗产申报进展</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 14px; line-height: 1.8;">
+                        本站致力于弘扬拥军优属优良传统，推广民间拥军秧歌艺术，记录和传播这一独特的文化现象。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">文化起源</a></li>
+                        <li><a href="#">动作图解</a></li>
+                        <li><a href="#">活动报名</a></li>
+                        <li><a href="#">装备商城</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：010-12345678</li>
+                        <li>邮箱：contact@yongjunyangge.cn</li>
+                        <li>地址：中国·某市文化广场</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 拥军秧歌文化网 版权所有 | 弘扬正能量
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
