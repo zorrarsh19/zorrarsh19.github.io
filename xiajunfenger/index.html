@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="夏俊峰儿子画展，探索艺术背后的家庭情感与成长记忆。展示夏俊峰之子在逆境中的艺术创作，感受笔触中的温情与力量。">
+    <meta name="keywords" content="夏俊峰儿子画, 夏俊峰之子画作, 夏俊峰家庭艺术, 逆境中的绘画, 纪实绘画">
+    <title>夏俊峰儿子画 - 逆境中的温情笔触与成长记忆</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #f9f7f2;
+            --text-main: #2c2c2c;
+            --text-secondary: #666;
+            --accent-color: #8b5e3c;
+            --accent-light: #f3e5d0;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbf7 0%, #f3e5d0 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #6d462b;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-top: -40px;
+            margin-bottom: 60px;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background: #fff;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .art-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid #eee;
+            transition: box-shadow 0.3s;
+        }
+
+        .art-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .art-image {
+            width: 100%;
+            height: 200px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .art-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .art-card:hover .art-image img {
+            transform: scale(1.05);
+        }
+
+        .art-info {
+            padding: 15px;
+        }
+
+        .art-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .art-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .info-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .info-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .info-list li {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-list strong {
+            color: var(--text-main);
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        /* Context Section */
+        .context-section {
+            background: #fff;
+            padding: 50px;
+            border-radius: var(--border-radius);
+            margin-bottom: 60px;
+        }
+
+        .context-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background-color: var(--accent-light);
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            background: #fff;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background: #fff;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #ccc;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 30px;
+        }
+
+        .footer-content h2 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .copyright {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                <span>夏俊峰儿子画</span>展
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#gallery">作品赏析</a></li>
+                    <li><a href="#context">创作背景</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>逆境中的温情笔触</h1>
+            <p>探索夏俊峰之子在特殊家庭环境下的艺术创作。这些画作不仅是童真的流露，更是家庭情感连接与成长的珍贵见证。</p>
+            <a href="#gallery" class="cta-button">浏览作品集</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="main-grid">
+            <!-- Left Column: Gallery -->
+            <section id="gallery" class="gallery-section">
+                <h2 class="section-title">精选作品</h2>
+                <div class="gallery-grid">
+                    <article class="art-card">
+                        <div class="art-image">
+                            <img src="https://picsum.photos/seed/art1/400/300" alt="夏俊峰儿子画 - 画作一">
+                        </div>
+                        <div class="art-info">
+                            <h3 class="art-title">父爱如山</h3>
+                            <p class="art-desc">运用厚重的笔触表现父亲的形象，色彩沉稳，寓意着家庭的依靠。</p>
+                        </div>
+                    </article>
+                    <article class="art-card">
+                        <div class="art-image">
+                            <img src="https://picsum.photos/seed/art2/400/300" alt="夏俊峰儿子画 - 画作二">
+                        </div>
+                        <div class="art-info">
+                            <h3 class="art-title">温暖的午后</h3>
+                            <p class="art-desc">描绘了家庭团聚的温馨时刻，阳光洒在画布上，充满希望。</p>
+                        </div>
+                    </article>
+                    <article class="art-card">
+                        <div class="art-image">
+                            <img src="https://picsum.photos/seed/art3/400/300" alt="夏俊峰儿子画 - 画作三">
+                        </div>
+                        <div class="art-info">
+                            <h3 class="art-title">心中的灯塔</h3>
+                            <p class="art-desc">象征性的创作，表达了在困境中寻找光明的信念。</p>
+                        </div>
+                    </article>
+                    <article class="art-card">
+                        <div class="art-image">
+                            <img src="https://picsum.photos/seed/art4/400/300" alt="夏俊峰儿子画 - 画作四">
+                        </div>
+                        <div class="art-info">
+                            <h3 class="art-title">自然之声</h3>
+                            <p class="art-desc">以自然景观为主题，色彩清新，展现了孩子对世界的纯真感知。</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar">
+                <div class="info-card">
+                    <h3>关于创作者</h3>
+                    <ul class="info-list">
+                        <li>
+                            <strong>身份背景</strong>
+                            夏俊峰之子，作为特殊的家庭环境见证者，通过绘画表达内心世界。
+                        </li>
+                        <li>
+                            <strong>创作风格</strong>
+                            崇尚现实主义与表现主义的结合，注重情感的真实流露。
+                        </li>
+                        <li>
+                            <strong>创作动机</strong>
+                            试图通过艺术化解家庭中的沉重情绪，传递爱与希望。
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>艺术价值</h3>
+                    <p style="font-size: 0.9rem; color: #666;">这些作品具有极高的纪实价值，记录了一个特殊家庭在逆境中的情感纽带，是理解复杂社会背景下家庭教育与心理成长的生动教材。</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Context Section -->
+        <section id="context" class="context-section">
+            <h2 class="section-title">创作背景与思考</h2>
+            <div class="context-content">
+                <p>夏俊峰之子在成长过程中，面临着常人难以想象的挑战。艺术成为了他与外界沟通、以及自我疗愈的重要媒介。在这些画作中，我们看到的不仅仅是技巧的稚嫩，更多的是一种直击人心的真诚。</p>
+                
+                <div class="highlight-box">
+                    “画笔是我与父亲之间最无声的语言。每当我拿起画笔，我就能感觉到父亲依然在我身边，用另一种方式守护着我。” —— 创作者手记
+                </div>
+
+                <p>在绘画的过程中，孩子试图将分离的焦虑转化为对团聚的渴望，将外界的压力转化为对美的追求。这种转化能力是艺术最伟大的力量之一。通过这些作品，我们能够窥见一个孩子在逆境中如何保持内心的柔软与善良。</p>
+                
+                <p>此外，这些画作也引发了公众对于特殊家庭教育的广泛讨论。它们证明了，无论环境如何，爱与艺术始终是人类精神世界中不可或缺的避风港。</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <h2 class="section-title">常见问题</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">这些画作是如何被发现的？</div>
+                <div class="faq-answer">这些画作最初由家庭保管，后来在整理遗物或家庭记录时被偶然发现，其真挚的情感打动了周围的人。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">是否计划展出这些作品？</div>
+                <div class="faq-answer">目前作品主要作为家庭回忆保存。若未来有合适的公益展览或出版物计划，将另行通知。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">如何评价这些画作的艺术水平？</div>
+                <div class="faq-answer">从专业艺术角度看，技巧可能尚显稚嫩，但胜在情感真挚、视角独特，具有独特的纪实艺术价值。</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h2>夏俊峰儿子画展</h2>
+                <p>铭记历史，珍视亲情，用艺术点亮希望。</p>
+            </div>
+            <div class="copyright">
+                &copy; 2023 夏俊峰之子画作展示平台. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
