@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>唇红齿白-健康牙齿护理与美学改善指南</title>
+    <meta name="description" content="唇红齿白是形容人容貌俊美、气质高雅的常用成语。本站为您提供关于牙齿美白、口腔护理、正畸咨询及口腔健康维护的专业指南与资讯。">
+    <meta name="keywords" content="唇红齿白,牙齿美白,口腔护理,牙齿矫正,牙科医院,笑容美学">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --primary-hover: #b71c1c;
+            --secondary-color: #f8f9fa;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 8px rgba(0,0,0,0.08);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 布局容器 */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: #fff;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 16px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions button {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 10px 24px;
+            border-radius: var(--radius);
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .header-actions button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: rgba(211, 47, 47, 0.1);
+            color: var(--primary-color);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* 核心概念区 */
+        .concept-section {
+            padding: 60px 0;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .concept-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .concept-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .concept-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .concept-list li::before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 10px;
+            min-width: 20px;
+        }
+
+        .concept-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* 专题栏目：护理与美学 */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-img {
+            height: 200px;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-img img {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .card-text {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .card-link {
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        /* 常见问题 FAQ */
+        .faq-section {
+            background-color: var(--secondary-color);
+            padding: 60px 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: var(--radius);
+            margin-bottom: 15px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 20px;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 20px;
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2c2c2c;
+            color: #999;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .concept-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .columns {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>唇红齿白</span>·美学口腔
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#care">日常护理</a></li>
+                    <li><a href="#treatment">医学改善</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button onclick="alert('感谢您的关注，请联系正规牙科机构咨询。')">预约咨询</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>唇红齿白：展现自信笑容的秘密</h1>
+                <p>不仅形容容貌俊美，更代表健康的口腔状态。掌握科学的牙齿美白与护理方法，让笑容时刻保持最佳状态。</p>
+                <div class="hero-tags">
+                    <span class="tag">牙齿美白</span>
+                    <span class="tag">正畸咨询</span>
+                    <span class="tag">口腔健康</span>
+                    <span class="tag">生活习惯</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 概念解释 -->
+        <section class="concept-section container">
+            <div class="concept-grid">
+                <div class="concept-content">
+                    <h2>什么是“唇红齿白”？</h2>
+                    <p>“唇红齿白”是中国传统美学中对容貌的一种经典描述。它指的是嘴唇红润、牙齿洁白，呈现出健康、生动且富有活力的外观。</p>
+                    <p>在现代社会，这一概念不仅关乎审美，更直接反映了口腔卫生状况和全身健康水平。健康的牙齿颜色通常呈现自然的淡黄色或象牙白，而非惨白或发灰。</p>
+                    <ul class="concept-list">
+                        <li><strong>健康标志：</strong>反映良好的口腔菌群平衡。</li>
+                        <li><strong>自信来源：</strong>笑容是人际交往中最具感染力的表情。</li>
+                        <li><strong>审美标准：</strong>符合大众对自然美的审美追求。</li>
+                    </ul>
+                </div>
+                <div class="concept-image">
+                    <img src="https://picsum.photos/seed/teeth_smile/600/400.jpg" alt="健康的笑容与牙齿结构示意图" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心栏目：日常护理 -->
+        <section id="care" class="container">
+            <div class="section-header">
+                <h2>日常护理：守护“唇红齿白”的基础</h2>
+                <p>良好的生活习惯是维持口腔美观的前提</p>
+            </div>
+            <div class="columns">
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/brush_teeth/400/300.jpg" alt="正确刷牙示意图">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">科学刷牙方法</h3>
+                        <p class="card-text">采用巴氏刷牙法，配合牙线清洁牙缝，能有效去除牙菌斑，预防牙结石堆积，保持牙齿表面光洁。</p>
+                        <a href="#" class="card-link">查看刷牙教程 &rarr;</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/food_diet/400/300.jpg" alt="饮食与牙齿健康">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">饮食与色素</h3>
+                        <p class="card-text">减少摄入深色饮料（咖啡、茶、红酒）和含糖量高的食物，避免长期吸烟，从源头减少牙齿外源性着色。</p>
+                        <a href="#" class="card-link">了解饮食禁忌 &rarr;</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/toothpaste/400/300.jpg" alt="选择合适的牙膏">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">牙膏的选择</h3>
+                        <p class="card-text">选择含氟牙膏增强防蛀能力，美白牙膏需谨慎使用，过度清洁可能损伤牙釉质，导致牙齿敏感。</p>
+                        <a href="#" class="card-link">牙膏选购指南 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 核心栏目：医学改善 -->
+        <section id="treatment" class="container">
+            <div class="section-header">
+                <h2>医学改善：重塑完美笑容</h2>
+                <p>当日常护理无法满足需求时，专业的牙科治疗是最佳选择</p>
+            </div>
+            <div class="columns">
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/whitening/400/300.jpg" alt="冷光美白过程">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">牙齿美白</h3>
+                        <p class="card-text">包括冷光美白、皓齿美白等技术。通过专业药剂作用于牙釉质，去除深层色素，安全提升牙齿亮度。</p>
+                        <a href="#" class="card-link">了解美白项目 &rarr;</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/veneers/400/300.jpg" alt="贴面修复">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">牙齿贴面</h3>
+                        <p class="card-text">针对牙齿缺损、变色或轻微排列不齐。瓷贴面能提供近乎自然的色泽和形态，改变牙齿外观。</p>
+                        <a href="#" class="card-link">查看贴面案例 &rarr;</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/orthodontics/400/300.jpg" alt="牙齿矫正">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">牙齿矫正</h3>
+                        <p class="card-text">通过金属托槽、陶瓷托槽或隐形矫正器，调整牙齿排列和咬合关系，改善面部侧貌线条。</p>
+                        <a href="#" class="card-link">在线咨询矫正 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container faq-container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于“唇红齿白”与牙齿护理的疑问</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">牙齿越白越好吗？</div>
+                    <div class="faq-answer">
+                        <p>不是。牙齿的自然颜色是淡黄色，这层黄色来源于牙釉质中的蛋白质和矿物质。过度的美白会使牙齿失去光泽，变得透明，甚至损伤牙釉质，导致牙齿敏感。追求“唇红齿白”应以健康自然为标准。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">如何快速让牙齿变白？</div>
+                    <div class="faq-answer">
+                        <p>对于外源性着色（如咖啡渍），定期洗牙是最有效的方法。对于内源性着色，建议咨询专业牙医，选择正规的美白诊所进行冷光美白，切勿使用来源不明的漂白剂。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">牙龈红肿会影响“唇红齿白”的效果吗？</div>
+                    <div class="faq-answer">
+                        <p>会。健康的牙龈呈现粉红色，如果牙龈红肿、出血或萎缩，会破坏整体的口腔美感。因此，维护牙龈健康与美白牙齿同等重要。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>唇红齿白·美学口腔</h3>
+                    <p>致力于普及口腔健康知识，分享牙齿美容与护理的专业资讯。让每一位用户都能拥有自信、健康的笑容。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">服务项目</a></li>
+                        <li><a href="#">案例展示</a></li>
+                        <li><a href="#">联系合作</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门话题</h4>
+                    <ul>
+                        <li><a href="#">牙齿矫正</a></li>
+                        <li><a href="#">冷光美白</a></li>
+                        <li><a href="#">根管治疗</a></li>
+                        <li><a href="#">种植牙</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>咨询热线：400-123-4567</li>
+                        <li>电子邮箱：info@example.com</li>
+                        <li>工作时间：9:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 唇红齿白美学口腔指南 版权所有 | 仅供信息参考，不构成医疗建议</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
